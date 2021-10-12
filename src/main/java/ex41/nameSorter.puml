@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class nameSorter
+abstract AbstractCollection
+interface List
+interface Collection
+
+List <|-- nameSorter
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- nameSorter <|-- ArrayList
+
+class nameSorter {
+Object[] elementData
+size()
+}
+
+enum TimeUnit {
+DAYS
+HOURS
+MINUTES
+}
+
+@enduml
